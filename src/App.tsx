@@ -9,6 +9,8 @@ import {
   BookOpen,
   Github
 } from 'lucide-react';
+import Navbar from './shared/Navbar';
+import Footer from './shared/Footer';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,45 +27,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Navbar */}
-      <nav className="fixed w-full bg-white shadow-md z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between h-16 items-center">
-            <div className="flex items-center">
-              <img src="/public/helpops-fevi.png" alt="HelpOps Logo" className="h-8 w-8" />
-              <span className="ml-2 text-xl font-bold text-blue-900">HelpOps Quest</span>
-            </div>
-
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-8">
-              <a href="#" className="text-blue-900 hover:text-orange-500 transition-colors">Home</a>
-              <a href="#" className="text-blue-900 hover:text-orange-500 transition-colors">Tasks</a>
-              <a href="#" className="text-blue-900 hover:text-orange-500 transition-colors">Leaderboards</a>
-              <a href="#" className="text-blue-900 hover:text-orange-500 transition-colors">Sponsor Us</a>
-            </div>
-
-            {/* Mobile Menu Button */}
-            <div className="md:hidden">
-              <button onClick={toggleMenu} className="text-blue-900">
-                {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-              </button>
-            </div>
-          </div>
-        </div>
-
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white">
-              <a href="#" className="block px-3 py-2 text-blue-900 hover:text-orange-500">Home</a>
-              <a href="#" className="block px-3 py-2 text-blue-900 hover:text-orange-500">Tasks</a>
-              <a href="#" className="block px-3 py-2 text-blue-900 hover:text-orange-500">Leaderboards</a>
-              <a href="#" className="block px-3 py-2 text-blue-900 hover:text-orange-500">Sponsor Us</a>
-            </div>
-          </div>
-        )}
-      </nav>
-
+      <Navbar isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center" 
                style={{
@@ -235,50 +199,7 @@ function App() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-gray-900 text-gray-300 py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <h3 className="text-white font-semibold mb-4">Quick Links</h3>
-              <ul className="space-y-2">
-                <li><a href="#" className="hover:text-orange-500 transition-colors">Home</a></li>
-                <li><a href="#" className="hover:text-orange-500 transition-colors">Tasks</a></li>
-                <li><a href="#" className="hover:text-orange-500 transition-colors">Leaderboards</a></li>
-                <li><a href="#" className="hover:text-orange-500 transition-colors">Sponsor Us</a></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-white font-semibold mb-4">About HelpOps-Hub</h3>
-              <p className="text-sm">
-                HelpOps-Hub is your ultimate platform for DevOps learning and professional growth.
-                We provide practical challenges, resources, and a supportive community.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-white font-semibold mb-4">Contact</h3>
-              <a href="mailto:contact@helpopshub.com" className="hover:text-orange-500 transition-colors">
-                contact@helpopshub.com
-              </a>
-            </div>
-            <div>
-              <h3 className="text-white font-semibold mb-4">Connect</h3>
-              <a
-                href="https://github.com/helpops-hub"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center hover:text-orange-500 transition-colors"
-              >
-                <Github className="h-5 w-5 mr-2" />
-                GitHub Repository
-              </a>
-            </div>
-          </div>
-          <div className="mt-12 pt-8 border-t border-gray-800 text-center">
-            <p>© 2025 HelpOps-Hub. All Rights Reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
