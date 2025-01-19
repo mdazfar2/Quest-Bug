@@ -13,6 +13,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './shared/Navbar';
 import Footer from './shared/Footer';
 import TasksPage from './components/TasksPage';
+import LeaderboardPage from './components/LeaderboardPage';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -207,6 +208,7 @@ function App() {
             </>
           } />
           <Route path="/tasks" element={<TasksPage />} />
+          <Route path="/leaderboard" element={<LeaderboardPage />} />
         </Routes>
         <Footer />
       </div>
