@@ -5,9 +5,10 @@ interface FooterProps {
   navigateToHome: () => void;
   navigateToTasks: () => void;
   navigateToLeaderboard: () => void;
+  navigateToSponsor: () => void;
 }
 
-function Footer({ navigateToHome, navigateToTasks, navigateToLeaderboard }: FooterProps) {
+function Footer({ navigateToHome, navigateToTasks, navigateToLeaderboard, navigateToSponsor }: FooterProps) {
   return (
     <footer className="bg-white border-t border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -34,7 +35,7 @@ function Footer({ navigateToHome, navigateToTasks, navigateToLeaderboard }: Foot
                 <button onClick={navigateToLeaderboard} className="text-gray-600 hover:text-orange-500">Leaderboards</button>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-orange-500">Sponsor Us</a>
+                <button onClick={navigateToSponsor} className="text-gray-600 hover:text-orange-500">Sponsor Us</button>
               </li>
             </ul>
           </div>
