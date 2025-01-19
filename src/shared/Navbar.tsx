@@ -1,5 +1,6 @@
 import React from 'react';
 import { Cloud, Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface NavbarProps {
   isMenuOpen: boolean;
@@ -20,8 +21,8 @@ function Navbar({ isMenuOpen, toggleMenu, navigateToHome, navigateToTasks }: Nav
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <button onClick={navigateToHome} className="text-blue-900 hover:text-orange-500 transition-colors">Home</button>
-            <button onClick={navigateToTasks} className="text-blue-900 hover:text-orange-500 transition-colors">Tasks</button>
+            <Link to="/" className="text-blue-900 hover:text-orange-500 transition-colors">Home</Link>
+            <Link to="/tasks" className="text-blue-900 hover:text-orange-500 transition-colors">Tasks</Link>
             <a href="#" className="text-blue-900 hover:text-orange-500 transition-colors">Leaderboards</a>
             <a href="#" className="text-blue-900 hover:text-orange-500 transition-colors">Sponsor Us</a>
           </div>
@@ -39,8 +40,8 @@ function Navbar({ isMenuOpen, toggleMenu, navigateToHome, navigateToTasks }: Nav
       {isMenuOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white">
-            <button onClick={navigateToHome} className="block w-full text-left px-3 py-2 text-blue-900 hover:text-orange-500">Home</button>
-            <button onClick={navigateToTasks} className="block w-full text-left px-3 py-2 text-blue-900 hover:text-orange-500">Tasks</button>
+            <Link to="/" className="block w-full text-left px-3 py-2 text-blue-900 hover:text-orange-500">Home</Link>
+            <Link to="/tasks" className="block w-full text-left px-3 py-2 text-blue-900 hover:text-orange-500">Tasks</Link>
             <a href="#" className="block px-3 py-2 text-blue-900 hover:text-orange-500">Leaderboards</a>
             <a href="#" className="block px-3 py-2 text-blue-900 hover:text-orange-500">Sponsor Us</a>
           </div>
