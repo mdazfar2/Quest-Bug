@@ -23,7 +23,7 @@ function Navbar({ isMenuOpen, toggleMenu, navigateToHome, navigateToTasks }: Nav
           <div className="hidden md:flex items-center space-x-8">
             <Link to="/" className="text-blue-900 hover:text-orange-500 transition-colors">Home</Link>
             <Link to="/tasks" className="text-blue-900 hover:text-orange-500 transition-colors">Tasks</Link>
-            <a href="#" className="text-blue-900 hover:text-orange-500 transition-colors">Leaderboards</a>
+            <a href="/leaderboard" className="text-blue-900 hover:text-orange-500 transition-colors">Leaderboards</a>
             <a href="#" className="text-blue-900 hover:text-orange-500 transition-colors">Sponsor Us</a>
           </div>
 
