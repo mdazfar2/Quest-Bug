@@ -14,6 +14,7 @@ import Navbar from './shared/Navbar';
 import Footer from './shared/Footer';
 import TasksPage from './components/TasksPage';
 import LeaderboardPage from './components/LeaderboardPage';
+import SponsorPage from './components/SponsorPage';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -209,6 +210,7 @@ function App() {
           } />
           <Route path="/tasks" element={<TasksPage />} />
           <Route path="/leaderboard" element={<LeaderboardPage />} />
+          <Route path="/Sponsor" element={<SponsorPage />} />
         </Routes>
         <Footer />
       </div>

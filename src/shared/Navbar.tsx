@@ -24,7 +24,7 @@ function Navbar({ isMenuOpen, toggleMenu, navigateToHome, navigateToTasks }: Nav
             <Link to="/" className="text-blue-900 hover:text-orange-500 transition-colors">Home</Link>
             <Link to="/tasks" className="text-blue-900 hover:text-orange-500 transition-colors">Tasks</Link>
             <a href="/leaderboard" className="text-blue-900 hover:text-orange-500 transition-colors">Leaderboards</a>
-            <a href="#" className="text-blue-900 hover:text-orange-500 transition-colors">Sponsor Us</a>
+            <a href="/Sponsor" className="text-blue-900 hover:text-orange-500 transition-colors">Sponsor Us</a>
           </div>
 
           {/* Mobile Menu Button */}
